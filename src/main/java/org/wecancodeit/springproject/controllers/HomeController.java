@@ -1,14 +1,27 @@
 package org.wecancodeit.springproject.controllers;
 
-import java.util.ArrayList;
+import javax.annotation.Resource;
 
 import org.springframework.stereotype.Controller;
-import org.wecancodeit.springproject.models.Product;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.wecancodeit.springproject.repositories.ProductRepository;
 
 
 @Controller
 public class HomeController {
 
-	private ProductRepository repo = new ProductRepository(new ArrayList<Product>());
+	@Resource
+	ProductRepository repo;
+
+	@GetMapping("/")
+	public String home() {
+		return "home";
+	}
+	
+	@GetMapping("/products")
+	public String getProductForm(Model model) {
+		model.addAttribute("products", repo.findAll());
+		return "products/add";
+	}
 }

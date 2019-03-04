@@ -1,35 +1,4 @@
-@media only screen and (max-width: 950px) {
-  .header__search__box {
-    display: none;
-  }
-
-  .header__search__button {
-    display: none;
-  }
-
-  .header__button {
-    display: none;
-  }
-
-  .mobile__menu__button {
-    font-size: 3rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    border-radius: 5px;
-  }
-
-  .mobile__menu__button:hover {
-    text-shadow: 1px 1px 10px black;
-    color: #f78c09;
-  }
-}
-
-@media only screen and (min-width: 951px) {
-  .mobile__menu__button {
-    display: none;
-  }
-}
-
+/* <!--BEGIN HEADER CSS--> */
 * {
   font-family: atrament-web, sans-serif;
   font-style: normal;
@@ -60,8 +29,11 @@ header {
 }
 
 .header__logo {
-  height: 4rem;
+  height: 10rem;
   width: auto;
+  margin-top: -3rem;
+  margin-bottom: -3rem;
+  margin-left: -1rem;
 }
 .navbar {
   display: flex;
@@ -89,6 +61,9 @@ ul {
   border-radius: 5px;
   border-style: solid;
   padding-left: 1rem;
+  padding-right: 3rem;
+  margin-left: 5rem;
+  font-size: 1rem;
 }
 
 .header__search__button {
@@ -101,7 +76,7 @@ ul {
 }
 
 .header__search__button:hover {
-  color: #f78c09;
+  color: #ff5d00;
 }
 
 .header__button {
@@ -118,9 +93,9 @@ ul {
 }
 
 .header__button:hover {
-  background-color: #f78c09;
+  background-color: #ff5d00;
   color: white;
-  border-color: #f78c09;
+  border-color: #ff5d00;
 }
 
 .hide {
@@ -142,7 +117,7 @@ ul {
   transition: all 0.2s ease-out;
 }
 .button:hover {
-  background-color: #fce181;
+  background-color: #ff5d00;
   color: white;
 }
 .overlay {
@@ -208,7 +183,7 @@ ul {
 }
 .popup .close:hover {
   opacity: 1;
-  color: #f78c09;
+  color: #ff5d00;
 }
 
 .popup .menu__content {
@@ -224,14 +199,14 @@ ul {
 
 .menu__logo__png {
   text-align: center;
-  height: 4rem;
+  height: 10rem;
   width: auto;
-  margin: 1rem;
+  margin: -2rem;
 }
 
 .menu__search {
   display: flex;
-  margin: .5rem;
+  margin: 0.5rem;
   align-items: center;
 }
 
@@ -241,7 +216,6 @@ ul {
   border-radius: 5px;
   border-style: solid;
   padding-left: 1rem;
-  
 }
 
 .menu__search__button {
@@ -254,7 +228,7 @@ ul {
 }
 
 .menu__search__button:hover {
-  color: #f78c09;
+  color: #ff5d00;
 }
 
 .menu__button {
@@ -271,9 +245,9 @@ ul {
 }
 
 .menu__button:hover {
-  background-color: #f78c09;
+  background-color: #ff5d00;
   color: white;
-  border-color: #f78c09;
+  border-color: #ff5d00;
 }
 
 .hide {
@@ -286,3 +260,4 @@ ul {
 .close {
   font-size: 40px;
 }
+/*<!--END HEADER CSS-->*/

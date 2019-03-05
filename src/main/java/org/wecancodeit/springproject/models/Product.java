@@ -1,18 +1,18 @@
 package org.wecancodeit.springproject.models;
 
-//import javax.persistence.Entity;
-//import javax.persistence.GeneratedValue;
-//import javax.persistence.Id;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import javax.persistence.Lob;
 
 
 
-//@Entity
+@Entity
 public class Product {
 
-//	@Id
-//	@GeneratedValue
-//	private Long id;
+	@Id
+	@GeneratedValue
+	private Long id;
 	private String name;
 	private int price;
 	private int year;
@@ -31,9 +31,9 @@ public class Product {
 		this.content = content;
 	}
 	
-//	public Long getId() {
-//		return id;
-//	}
+	public Long getId() {
+		return id;
+	}
 	
 	public String getName() {
 		return name;
@@ -57,9 +57,10 @@ public class Product {
 
 	@Override
 	public String toString() {
-		return "Product [name=" + name + ", price=" + price + ", year=" + year + ", publisher=" + publisher
-				+ ", content=" + content + "]";
+		return "Product [id=" + id + ", name=" + name + ", price=" + price + ", year=" + year + ", publisher="
+				+ publisher + ", content=" + content + "]";
 	}
+
 
 
 

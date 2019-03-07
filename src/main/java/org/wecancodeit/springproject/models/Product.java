@@ -4,8 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Lob;
-
-
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Product {
@@ -19,10 +18,13 @@ public class Product {
 	private String publisher;
 	@Lob
 	private String content;
- 
 
-	public Product () {}
+	@ManyToOne
+	private Tag tag;
 	
+	public Product() {
+	}
+
 	public Product(String name, int price, int year, String publisher, String content) {
 		this.name = name;
 		this.price = price;
@@ -30,27 +32,27 @@ public class Product {
 		this.publisher = publisher;
 		this.content = content;
 	}
-	
+
 	public Long getId() {
 		return id;
 	}
-	
+
 	public String getName() {
 		return name;
 	}
-	
+
 	public int getPrice() {
 		return price;
 	}
-	
+
 	public int getYear() {
 		return year;
 	}
-	
+
 	public String getPublisher() {
 		return publisher;
 	}
-	
+
 	public String getContent() {
 		return content;
 	}
@@ -61,9 +63,4 @@ public class Product {
 				+ publisher + ", content=" + content + "]";
 	}
 
-
-
-
-
-	
 }

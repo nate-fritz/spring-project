@@ -27,6 +27,12 @@ public class ProductController {
 		model.addAttribute("products", productRepo.findAll());
 		return "products/add";
 	}
+	
+	@GetMapping("/all")
+	public String getProductsAll(String product, Model model) {
+		model.addAttribute("products", productRepo.findAll());
+		return "/products/all";
+	}
 
 	@GetMapping("/{id}")
 	public String getProduct(@PathVariable Long id, Model model) {

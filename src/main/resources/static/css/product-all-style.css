@@ -357,7 +357,6 @@ header ul {
     grid-template-areas:
     "viewport viewport"
     "content content"
-    "content3 content2"
     "footer  footer";
   }
   
@@ -374,7 +373,7 @@ header ul {
     grid-template-columns: 20% auto 20%;
     grid-template-areas:
     "viewport viewport viewport"
-    "content content2 content3"
+    ". content ."
     "footer  footer  footer";
     max-width: 100%;
   }
@@ -442,6 +441,28 @@ header ul {
 .content3 {
   margin-left: 0.7rem;
   margin-right: 0.7rem;
+}
+
+.product__info {
+  border-bottom-style: solid;
+  border-bottom-color: black;
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  margin-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+.product__info__field {
+  background-color: lightgray;
+  border-style: solid;
+  border-width: 1px 1px 1px;
+  box-shadow: 1px 1px 1px inset black;
+  padding: 2px;
+  text-overflow:ellipsis;
+  overflow:hidden;
+  white-space: nowrap;
+  max-width: 65ch;
 }
 
 /* (7) Footer */
